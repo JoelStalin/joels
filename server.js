@@ -1,6 +1,6 @@
 const app = require('./config/express')();
 
-app.get('/index.html',function(){
+app.get('/index.html',function(req,res){
 	
         res.render('home');
     
