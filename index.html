@@ -1,0 +1,105 @@
+<!doctype html>
+
+<html>
+<head>
+    <style>
+        div{
+            width: 20%;
+            height:200px;
+            margin: 10px;
+            background-color: gray;
+        }
+    
+    </style>
+    <script>
+    
+        function allowDefault(ev)
+        {
+            ev.preventDefault();
+        }
+        function red(color){
+            document.getElementById(data).style.color = color;
+        }
+        
+        
+        function drag(ev,Color)
+        {
+            ev.dataTransfer.setData("text", ev.target.id);
+            ev.dataTransfer.setData("color",Color);
+            
+        }
+
+        function drop(ev)
+        {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            var color = ev.dataTransfer.getData("color");
+            var  obk = document.getElementById(data);
+                    console.log(data)
+
+            console.log(obk)
+             
+
+            ev.target.appendChild(document.getElementById(data));
+        
+            
+                if (data=="res1" && ev.target.id=="div1")
+                {
+                    obk.style.color= "red";
+                }
+            
+               if (data=="res2" && ev.target.id=="div2")
+                {
+                    obk.style.color= "blue";
+                }
+            
+               if (data=="res3" && ev.target.id=="div3")
+                {
+                    obk.style.color= "Green";
+                }
+            
+        }
+        
+        
+    </script>
+    
+    
+</head>
+<body>
+        <script src="./js/jquery-3.1.1.min.js"></script>
+<script src="./js/jquery-ui.js"></script>
+    
+    
+    
+<h1 id="div1" ondrop="drop(event)" ondragover="allowDefault(event)" >Rojo</h1>
+<h1 id="div2" ondrop="drop(event)" ondragover="allowDefault(event)" >Azul</h1>
+<h1 id="div3" ondrop="drop(event)" ondragover="allowDefault(event)" >Verde</h1>
+
+
+
+    
+    
+<h1 id="res1" ondragstart="drag(event,'red')" draggable="true">1</h1>    
+<h1 id="res2" ondragstart="drag(event)" draggable="true">2</h1>    
+<h1 id="res3" ondragstart="drag(event)" draggable="true">3</h1>    
+
+    
+    
+ <script>
+    
+     
+     
+     $(document).ready(function(){
+    $("#res").draggable();
+
+     });
+    
+    
+    
+    </script>
+    
+</body>
+
+    
+
+</html>
