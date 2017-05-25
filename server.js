@@ -1,9 +1,9 @@
 const app = require('./config/express')();
 
 app.get('/index.html',function(){
-	controller.index = function(req, res){
+	
         res.render('home');
-    }
+    
   
  });
 
