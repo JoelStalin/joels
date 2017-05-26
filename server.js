@@ -1,5 +1,5 @@
 const app = require('./config/express')();
-var findb = require('./db/findb')
+//var findb = require('./db/findb')
 
 //findb.dbfind('Personal',function render(datos){
 
