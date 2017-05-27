@@ -1,0 +1,2 @@
+C:\joels\obj\Debug\joels.njsprojResolveAssemblyReference.cache
+C:\joels\bin\Microsoft.NodejsTools.WebRole.dll

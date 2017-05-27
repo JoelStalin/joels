@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{b58a1fd2-79fe-4bfc-9615-79994672439e}</ProjectGuid>
+    <ProjectHome />
+    <ProjectView>ShowAllFiles</ProjectView>
+    <StartupFile>server.js</StartupFile>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <LaunchUrl>index.html</LaunchUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <ItemGroup>
+    <Content Include=".yo-rc.json" />
+    <Content Include="bower.json" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Compile Include="gulpfile.js" />
+    <Compile Include="server.js" />
+    <Compile Include="config\express.js" />
+    <Compile Include="db\findb.js" />
+    <Compile Include="app\controllers\home.js" />
+    <Compile Include="app\models\model.js" />
+    <Compile Include="app\routes\home.js" />
+    <Content Include="app\views\home.ejs" />
+    <Content Include="app\views\home2.ejs" />
+    <Content Include="public\css\app.css" />
+    <Content Include="public\images\index.html" />
+    <Compile Include="public\js\angular.min.js" />
+    <Compile Include="public\js\app.js" />
+    <Compile Include="public\js\bootstrap.js" />
+    <Compile Include="public\js\bootstrap.min.js" />
+    <Compile Include="public\js\jquery-1.10.2.intellisense.js" />
+    <Compile Include="public\js\jquery-1.10.2.js" />
+    <Compile Include="public\js\jquery-1.10.2.min.js" />
+    <Compile Include="public\js\jquery.validate-vsdoc.js" />
+    <Compile Include="public\js\jquery.validate.js" />
+    <Compile Include="public\js\jquery.validate.min.js" />
+    <Compile Include="public\js\jquery.validate.unobtrusive.js" />
+    <Compile Include="public\js\jquery.validate.unobtrusive.min.js" />
+    <Compile Include="public\js\modernizr-2.6.2.js" />
+    <Compile Include="public\js\respond.js" />
+    <Compile Include="public\js\respond.min.js" />
+    <Compile Include="public\js\socket.io.js" />
+    <Compile Include="public\js\_references.js" />
+    <Content Include="public\layout\index.html" />
+    <Content Include="public\pages\basic-grid.html" />
+    <Content Include="public\pages\full-width.html" />
+    <Content Include="public\pages\gallery.html" />
+    <Content Include="public\pages\index.html" />
+    <Content Include="public\pages\sidebar-left.html" />
+    <Content Include="public\pages\sidebar-right.html" />
+    <Content Include="public\images\demo\index.html" />
+    <Content Include="public\images\demo\100x100.png" />
+    <Content Include="public\images\demo\222x100.png" />
+    <Content Include="public\images\demo\320x168.png" />
+    <Content Include="public\images\demo\320x220.png" />
+    <Content Include="public\images\demo\avatar.png" />
+    <Content Include="public\images\demo\imgl.gif" />
+    <Content Include="public\images\demo\imgr.gif" />
+    <Content Include="public\images\demo\backgrounds\index.html" />
+    <Content Include="public\images\demo\backgrounds\01.png" />
+    <Content Include="public\images\demo\backgrounds\02.png" />
+    <Content Include="public\images\demo\backgrounds\03.png" />
+    <Content Include="public\images\demo\backgrounds\04.png" />
+    <Content Include="public\images\demo\gallery\index.html" />
+    <Content Include="public\images\demo\gallery\01.png" />
+    <Content Include="public\layout\scripts\index.html" />
+    <Compile Include="public\layout\scripts\angular.min.js" />
+    <Compile Include="public\layout\scripts\jquery.backtotop.js" />
+    <Compile Include="public\layout\scripts\jquery.fitvids.js" />
+    <Compile Include="public\layout\scripts\jquery.min.js" />
+    <Compile Include="public\layout\scripts\jquery.mobilemenu.js" />
+    <Content Include="public\layout\styles\index.html" />
+    <Content Include="public\layout\styles\font-awesome.min.css" />
+    <Content Include="public\layout\styles\framework.css" />
+    <Content Include="public\layout\styles\layout.css" />
+    <Content Include="public\layout\styles\fonts\index.html" />
+    <Content Include="public\layout\styles\fonts\fontawesome-webfont.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app" />
+    <Folder Include="app\controllers" />
+    <Folder Include="app\models" />
+    <Folder Include="app\routes" />
+    <Folder Include="app\views" />
+    <Folder Include="config" />
+    <Folder Include="db" />
+    <Folder Include="joels" />
+    <Folder Include="joels\joels" />
+    <Folder Include="public" />
+    <Folder Include="public\css" />
+    <Folder Include="public\images" />
+    <Folder Include="public\images\demo" />
+    <Folder Include="public\images\demo\backgrounds" />
+    <Folder Include="public\images\demo\gallery" />
+    <Folder Include="public\js" />
+    <Folder Include="public\layout" />
+    <Folder Include="public\layout\scripts" />
+    <Folder Include="public\layout\styles" />
+    <Folder Include="public\layout\styles\fonts" />
+    <Folder Include="public\pages" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
