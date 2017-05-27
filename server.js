@@ -1,10 +1,10 @@
 const app = require('./config/express')();
-//var findb = require('./db/findb')
+var findb = require('./db/findb')
 
-//findb.dbfind('Personal',function render(datos){
+findb.dbfind('Personal',function render(datos){
 
-	//console.log(datos);
-//});
+	console.log(datos);
+});
 app.get('/index.html',function(req,res){
    res.render('home');
  });
