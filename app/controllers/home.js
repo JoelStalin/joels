@@ -1,9 +1,8 @@
-module.exports = function(){
-
+﻿module.exports = function(page,data){
 	var controller = {};
 
     controller.index = function(req, res){
-        res.render('home');
+        res.render(page,data);
     };
 
     return controller;
