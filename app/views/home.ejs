@@ -9,7 +9,22 @@ Licence URI: http://www.os-templates.com/template-terms
 <html ng-app="app">
 <!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
 <head>
+     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 200px;
+             width:100%%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
   (adsbygoogle = window.adsbygoogle || []).push({
@@ -131,7 +146,7 @@ Licence URI: http://www.os-templates.com/template-terms
   <section class="hoc container clear"> 
     
     <div class="sectiontitle">
-      <h6 class="heading">Felis etiam efficitur</h6>
+      <h6 class="heading">Skills And knowledge</h6>
       <p>Tellus ipsum sagittis nec volutpat vestibulum</p>
     </div>
     <ul class="nospace group">
@@ -220,7 +235,7 @@ Licence URI: http://www.os-templates.com/template-terms
 <div class="wrapper row3">
   <section class="hoc container clear"> 
     
-    <div class="sectiontitle">
+    <div class="sectiontitle ">
       <h6 class="heading">Nulla mollis massa</h6>
       <p>Eu facilisis tempus fusce sagittis ex sit amet</p>
     </div>
@@ -281,10 +296,10 @@ Licence URI: http://www.os-templates.com/template-terms
 
 
 
-<div class="wrapper row4 bgded overlay" style="background-image:url('images/demo/backgrounds/04.png');">
+<div class="wrapper row4 bgded overlay" >
   <footer id="footer" class="hoc clear"> 
     
-    <div class="one_third first">
+    <div class="one_third first top" >
       <h6 class="heading">Commodo et blandit quis</h6>
       <ul class="nospace btmspace-30 linklist contact">
         <li><i class="fa fa-map-marker"></i>
@@ -311,14 +326,42 @@ Licence URI: http://www.os-templates.com/template-terms
     </div>
     <div class="one_third">
       <h6 class="heading">Sem ipsum auctor dignissim</h6>
-      <figure><a href="#"><img class="borderedbox inspace-10 btmspace-15" src="images/demo/320x168.png" alt=""></a>
+      <figure><div class="borderedbox inspace-10 btmspace-15" id="map" ></div>
         <figcaption>
           <h6 class="nospace font-x1"><a href="#">Tortor congue quis arcu</a></h6>
           <time class="font-xs block btmspace-10" datetime="2045-04-06">Friday, 6<sup>th</sup> April 2045</time>
         </figcaption>
+          
       </figure>
+          
+       
     </div>
-    
+      
+    <script>
+      var map;
+      function initMap() {
+      var uluru =  {lat: 18.530825, lng: -69.804055};
+          var titulo = 'My Casa';
+          
+          //var icono = '<svg fill="#000000" height="36" viewBox="0 0 24 24" width="36" xmlns="http://www.w3.org/2000/svg">'+'<path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>'+'                               <path d="M0 0h24v24H0z" fill="none"/>'+'</svg>';
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 14,
+          center: uluru,
+            title:titulo
+        });
+        var image1 = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';  
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+            title:titulo,
+            label:titulo,
+            //icon = image1
+            
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANr7AWSHZW8q7Gf3PhybTBFICcspWzonk&callback=initMap"
+    async defer></script>
   </footer>
 </div>
 
