@@ -10,7 +10,8 @@ File: Layout CSS
 
 @import url("font-awesome.min.css");
 @import url("framework.css");
-
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css?family=Courgette|Dancing+Script|Pacifico|Permanent+Marker|Sedgwick+Ave+Display');
 
 /* Rows
 --------------------------------------------------------------------------------------------------------------- */
@@ -167,7 +168,7 @@ Delete it completely to stop fading
 nav ul, nav ol{margin:0; padding:0; list-style:none;}
 
 #mainav, #breadcrumb, .sidebar nav{line-height:normal;}
-#mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after{position:absolute; font-family:"FontAwesome"; font-size:10px; line-height:10px;}
+#mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after{position:absolute; font-family: 'Courgette', cursive; font-size:10px; line-height:10px;}
 
 /* Top Navigation */
 #mainav{}
@@ -268,36 +269,40 @@ td{border-width:0 1px;}
 /* Colours
 --------------------------------------------------------------------------------------------------------------- */
 body {
-  color: #1E88E5;
+  color: #ECEFF1;
   background-color: #212121;
+   font-family: 'Courgette', cursive;
 }
-a{color:#1E88E5;}
+a{color:#ECEFF1;}
 a:active, a:focus{background:transparent;}/* IE10 + 11 Bugfix - prevents grey background */
 hr, .borderedbox{border-color:#F4F4F4;}
 label span{color:#FF0000; background-color:inherit;}
-input:focus, textarea:focus, *:required:focus{border-color:#1E88E5;}
+input:focus, textarea:focus, *:required:focus{border-color:#ECEFF1;}
 
-.overlay{color:#1E88E5; background-color:inherit;}
+.overlay{color:#ECEFF1; background-color:inherit;}
 .overlay::after{color:inherit; background-color:rgba(0,0,0,.6);}
 .overlay.light{color:#474747;}
 .overlay.light::after{background-color:rgba(255,255,255,.85);}
 
 .btn, .btn.inverse:hover {
-  color: #1E88E5;
-  background-color: #EF6C00;
-  border-color: #1E88E5;
+  color: #ECEFF1;
+  background-color: #039BE5;
+  border-color: #424242;
 }
 .btn:hover, .btn.inverse{color:inherit; background-color:transparent; border-color:inherit;}
 
 
 /* Rows */
-.row0, .row0 a{color:#474747; background-color:#1E88E5;}
-.row1{color:#1E88E5;}
+.row0, .row0 a{color:#474747; background-color:#ECEFF1;}
+.row1{color:#ECEFF1;}
 .row2{color:#F1F1F1;}
 .row1 + .row2{border-color:rgba(255,255,255,.2);}
-.row3{color:#474747; background-color:#1E88E5;}
+.row3{color:#474747; background-color:#ECEFF1;}
 .row4{color:#A8A7A6;}
-.row5, .row5 a{color:#1E88E5; background-color:#1E88E5;}
+.row5, .row5 a {
+  color: #039BE5;
+  background-color: #ECEFF1;
+}
 
 
 /* Top Bar */
@@ -310,48 +315,58 @@ input:focus, textarea:focus, *:required:focus{border-color:#1E88E5;}
 
 
 /* Page Intro */
-#pageintro li{color:#1E88E5;}
+#pageintro li{color:#ECEFF1;}
 
 
 /* Content Area */
-.latest article figure figcaption{color:#1E88E5;}
+.latest article figure figcaption{color:#ECEFF1;}
 .latest article figure figcaption time strong{background-color:#F9C3B6;}
 .latest article figure figcaption time em{background-color:#F28468;}
 
 
 /* Footer */
-#footer .heading{color:#1E88E5;}
+#footer .heading {
+  color: #039BE5;
+}
 #footer hr, #footer .borderedbox, #footer .linklist li{border-color:rgba(255,255,255,.1);}
 
 #footer input, #footer button{border-color:transparent;}
-#footer input{color:#1E88E5; background-color:#222222;}
-#footer input:focus{border-color:#1E88E5;}
-#footer button{color:#1E88E5; background-color:#1E88E5;}
+#footer input {
+  color: #039BE5;
+  background-color: #222222;
+}
+  #footer input:focus {
+    border-color: #039BE5;
+  }
+#footer button {
+  color: #039BE5;
+  background-color: #ECEFF1;
+}
 
 
 /* Navigation */
 #mainav li a{color:inherit;}
-#mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#1E88E5; background-color:inherit;}
-#mainav li li a, #mainav .active li a{color:#1E88E5; background-color:rgba(0,0,0,.6); border-color:rgba(0,0,0,.6);}
-#mainav li li:hover > a, #mainav .active .active > a{color:#1E88E5; background-color:#1E88E5;}
-#mainav form select{color:#1E88E5; background-color:#000000; border-color:rgba(255,255,255,.3);}
+#mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#ECEFF1; background-color:inherit;}
+#mainav li li a, #mainav .active li a{color:#ECEFF1; background-color:rgba(0,0,0,.6); border-color:rgba(0,0,0,.6);}
+#mainav li li:hover > a, #mainav .active .active > a{color:#ECEFF1; background-color:#ECEFF1;}
+#mainav form select{color:#ECEFF1; background-color:#000000; border-color:rgba(255,255,255,.3);}
 
 #breadcrumb a{color:inherit; background-color:inherit;}
-#breadcrumb li:last-child a{color:#1E88E5;}
+#breadcrumb li:last-child a{color:#ECEFF1;}
 
 .container .sidebar nav a{color:inherit; border-color:#F4F4F4;}
-.container .sidebar nav a:hover{color:#1E88E5;}
+.container .sidebar nav a:hover{color:#ECEFF1;}
 
 .pagination a, .pagination strong{border-color:#F4F4F4;}
-.pagination .current *{color:#1E88E5; background-color:#1E88E5;}
+.pagination .current *{color:#ECEFF1; background-color:#ECEFF1;}
 
-#backtotop{color:#1E88E5; background-color:#1E88E5;}
+#backtotop{color:#ECEFF1; background-color:#ECEFF1;}
 
 
 /* Tables + Comments */
 table, th, td, #comments .avatar, #comments input, #comments textarea{border-color:#F4F4F4;}
-#comments input:focus, #comments textarea:focus, #comments *:required:focus{border-color:#1E88E5;}
-th{color:#1E88E5; background-color:#373737;}
+#comments input:focus, #comments textarea:focus, #comments *:required:focus{border-color:#ECEFF1;}
+th{color:#ECEFF1; background-color:#373737;}
 tr, #comments li, #comments input[type="submit"], #comments input[type="reset"]{color:inherit; background-color:#FBFBFB;}
 tr:nth-child(even), #comments li:nth-child(even){color:inherit; background-color:#F7F7F7;}
 table a, #comments a{background-color:inherit;}
