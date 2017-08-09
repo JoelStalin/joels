@@ -37,7 +37,7 @@ Licence URI: http://www.os-templates.com/template-terms
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 </head>
-<body ng-controller="MainController" id="top">
+<body ng-controller="MainController" id="top" onload="color()">
 
 
 
@@ -59,7 +59,7 @@ Licence URI: http://www.os-templates.com/template-terms
 
 
 <!-- Top Background Image Wrapper -->
-<div class="bgded overlay" style="background-image:url('images/demo/backgrounds/01.png');"> 
+<div class="bgded overlay"  id="mainimg" style="background-image:url('images/demo/backgrounds/1.jpg');"> 
   
   <div class="wrapper row1">
     <header id="header" class="hoc clear"> 
@@ -100,8 +100,100 @@ Licence URI: http://www.os-templates.com/template-terms
           <li><a class="btn" href="#">My Ideas </a></li>
           <li><a class="btn inverse" href="#">Skills</a></li>
         </ul>
+        <ul class=" inline pushright">
+          <li><a href="#"><svg height="20" width="20">
+  <circle cx="8" cy="8" r="4" stroke="black" stroke-width="1" fill="none" class="circulo" id="c1" />   
+  Sorry, your browser does not support inline SVG.  
+</svg> 
+    <svg height="20" width="20">
+  <circle cx="8" cy="8" r="4" stroke="black" stroke-width="1" fill="none" class="circulo" id="c2" />   
+  Sorry, your browser does not support inline SVG.  
+</svg>
+    <svg height="20" width="20">
+  <circle cx="8" cy="8" r="4" stroke="black" stroke-width="1" fill="none" class="circulo" id="c3" />   
+  Sorry, your browser does not support inline SVG.  
+</svg>
+    <svg height="20" width="20">
+  <circle cx="8" cy="8" r="4" stroke="black" stroke-width="1" fill="none" class="circulo" id="c4" />   
+  Sorry, your browser does not support inline SVG.  
+</svg> </a></li>
+        </ul>
       </footer>
+      <script>
+      var A = [0,0,0,0];
+ var switchFunction = function(n) {    
+     switch(n) {
+    case 1:
+        comprueba(A)         
+         circul =document.getElementById('c1');         
+        circul.setAttribute("fill",'red');
+              var  imge =document.getElementById("mainimg"); 
+                 imge.setAttribute("style","background-image:url('images/demo/backgrounds/"+ n +".jpg');");
+                 A[1] = 1 ; 
+        break;
+    case 2:
+       comprueba(A)
+        circul =document.getElementById('c2');         
+        circul.setAttribute("fill",'red');
+              var  imge =document.getElementById("mainimg"); 
+                 imge.setAttribute("style","background-image:url('images/demo/backgrounds/"+ n +".jpg');");
+                    A[2] = 1 ; 
+        break;
+     case 3:
+       comprueba(A)
+        circul =document.getElementById('c3');         
+        circul.setAttribute("fill",'red');
+              var  imge =document.getElementById("mainimg"); 
+                 imge.setAttribute("style","background-image:url('images/demo/backgrounds/"+ n +".jpg');");
+                 A[3] = 1 ;
+        break;
+     case 4:
+          comprueba(A)
+        circul =document.getElementById('c4');         
+        circul.setAttribute("fill",'red');
+              var  imge =document.getElementById("mainimg"); 
+                 imge.setAttribute("style","background-image:url('images/demo/backgrounds/"+ n +".jpg');");
+                 A[4] = 1 ;
+                 n=1;
+        break;            
+    default:
+        }
+ }
       
+     
+ function color(){
+     var  circul =document.getElementById('c1'); 
+     var i = 0;
+     var d = new Date();
+     var n = d.getSeconds();
+     var numero = 0;
+     setInterval(function (){
+         numero+=1;
+         
+         switchFunction(numero)
+         if (numero===4) {
+             numero =0;
+         }
+     }, 4000)
+     
+    };
+  
+ function comprueba(A){
+        if(0 != A.indexOf(1) ){
+            var h = A.indexOf(1).toString();
+             if(h > 0){
+             var r = 'c'+ h;
+                 circul =document.getElementById(r); 
+                 circul.setAttribute("fill",'none');
+               var  imge =document.getElementById("mainimg"); 
+                 imge.setAttribute("fill","background-image:url('images/demo/backgrounds/1.jpg');");
+                 A[A.indexOf(1)] = 0 ;
+             }
+                      
+        };
+     };
+
+ </script>
     </article>
   </div>
   
@@ -362,6 +454,7 @@ Licence URI: http://www.os-templates.com/template-terms
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANr7AWSHZW8q7Gf3PhybTBFICcspWzonk&callback=initMap"
     async defer></script>
+    
   </footer>
 </div>
 
